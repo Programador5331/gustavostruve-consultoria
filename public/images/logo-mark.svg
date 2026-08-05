@@ -1,0 +1,23 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gsciTop" x1="4" y1="6" x2="46" y2="26" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3DEBCF"/>
+      <stop offset="1" stop-color="#19D3B5"/>
+    </linearGradient>
+    <linearGradient id="gsciMid" x1="8" y1="18" x2="52" y2="46" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#19D3B5"/>
+      <stop offset="1" stop-color="#0F7C6B"/>
+    </linearGradient>
+    <linearGradient id="gsciBottom" x1="14" y1="34" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F7C6B"/>
+      <stop offset="1" stop-color="#073F37"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M10 20L32 6L54 20L32 34L10 20Z" fill="url(#gsciTop)"/>
+  <path d="M10 20L32 34L32 34L10 34V20Z" fill="#0D2A24"/>
+  <path d="M10 34L32 20L54 34L32 48L10 34Z" fill="url(#gsciMid)"/>
+  <path d="M10 34L10 48L32 48L32 34L10 34Z" fill="#0A2621"/>
+  <path d="M14 46L34 34L54 46L34 58L14 46Z" fill="url(#gsciBottom)"/>
+  <path d="M28 20L40 27L28 34V20Z" fill="#04140F"/>
+</svg>

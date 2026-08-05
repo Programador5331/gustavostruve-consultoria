@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# claude code local config
+.claude/
+
+# personal source assets (not used directly by the site build)
+/assets/
+/Foto Gustavo Struve.png
+/foto de perfil de LinkedIn moderno hombre.png.png
