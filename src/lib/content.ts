@@ -7,6 +7,7 @@ export const site = {
   email: "gustavo.struve@gmail.com",
   phone: "+593 995 008 070",
   whatsapp: "593995008070",
+  meetingUrl: "https://meetings.hubspot.com/gstruve",
   linkedin: "https://linkedin.com/in/gustavostruve",
   facebook: "https://www.facebook.com/gustavostruveconsultoria",
   instagram: "https://www.instagram.com/gustavostruvemkt/",
@@ -295,7 +296,7 @@ export const contact = {
   text: "Una conversación de 20 minutos puede ser el inicio de la transformación que tu institución necesita.",
   steps: [
     { num: "01", title: "Escríbeme hoy", text: "Un mensaje corto a WhatsApp o email con el nombre de tu institución y el área que más te preocupa." },
-    { num: "02", title: "Agenda la llamada", text: "Te propongo horarios disponibles esta semana para una reunión de 20 minutos, sin costo." },
+    { num: "02", title: "Agenda la llamada", text: "Eliges tú mismo el horario que más te convenga en mi calendario. Sin ida y vuelta de mensajes, sin costo." },
     { num: "03", title: "Conversamos sin compromiso", text: "Te escucho, te hago las preguntas correctas y te digo con honestidad si puedo ayudarte y cómo." },
     { num: "04", title: "Recibe tu propuesta", text: "En 48 horas tienes una propuesta personalizada con precio, alcance y próximos pasos concretos." },
   ],

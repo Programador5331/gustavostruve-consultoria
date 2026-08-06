@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowDown } from "lucide-react";
-import { hero, whatsappLink } from "@/lib/content";
+import { hero, site } from "@/lib/content";
 import { Counter } from "@/components/ui/Counter";
 
 export function Hero() {
@@ -92,7 +92,7 @@ export function Hero() {
               className="mt-10 flex flex-wrap items-center gap-4"
             >
               <a
-                href={whatsappLink("Hola Gustavo, quisiera agendar una llamada de 20 minutos.")}
+                href={site.meetingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-full bg-teal px-7 py-4 text-sm font-semibold text-[#04140f] hover:bg-white transition-colors"

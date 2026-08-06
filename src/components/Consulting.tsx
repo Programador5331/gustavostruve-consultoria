@@ -7,7 +7,7 @@ import {
   consultingResults,
   consultingProcess,
   smartHospitalIndex,
-  whatsappLink,
+  site,
 } from "@/lib/content";
 import { Reveal, RevealGroup, revealItem } from "@/components/ui/Reveal";
 
@@ -136,7 +136,7 @@ export function Consulting() {
 
         <Reveal className="mt-20 flex justify-center">
           <a
-            href={whatsappLink("Hola Gustavo, quisiera una reunión exploratoria de 20 minutos.")}
+            href={site.meetingUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 rounded-full bg-teal px-8 py-4 text-sm font-semibold text-[#04140f] hover:bg-white transition-colors"

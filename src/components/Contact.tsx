@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle, Mail, Phone } from "lucide-react";
+import { CalendarClock, MessageCircle, Mail, Phone, ArrowRight } from "lucide-react";
 import { contact, site, whatsappLink } from "@/lib/content";
 import { Reveal, RevealGroup, revealItem } from "@/components/ui/Reveal";
 
@@ -27,7 +27,20 @@ export function Contact() {
               <p className="mt-6 text-lg text-text-secondary max-w-sm">{contact.text}</p>
             </Reveal>
 
-            <Reveal delay={0.15} className="mt-10 space-y-4">
+            <Reveal delay={0.1}>
+              <a
+                href={site.meetingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group mt-8 inline-flex items-center gap-2 rounded-full bg-teal px-7 py-4 text-sm font-semibold text-[#04140f] hover:bg-white transition-colors"
+              >
+                <CalendarClock size={16} />
+                Agendar mi llamada gratuita
+                <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
+              </a>
+            </Reveal>
+
+            <Reveal delay={0.2} className="mt-8 space-y-4">
               <a
                 href={whatsappLink("Hola Gustavo, quisiera conversar sobre mi institución.")}
                 target="_blank"
