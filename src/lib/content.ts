@@ -279,7 +279,7 @@ export const about = {
   bio: [
     "MBA y Máster en Gerencia en Salud, con más de 20 años de experiencia liderando operaciones en el sector salud en Ecuador y Latinoamérica.",
     "Ha ocupado cargos gerenciales en empresas de distintos sectores — salud, banca y retail — entre ellos Gerente Regional en VERIS, liderando equipos de más de 200 personas. Docente universitario en gestión de salud, formando a la próxima generación de directivos del sector.",
-    "Desde 2013 es fundador y CEO de Gustavo Struve Consultoría Integral, acompañando al sector salud y a otros sectores con metodologías modernas de gestión — sin la estructura ni el costo de una consultora internacional.",
+    "Desde 2013 es fundador y CEO de Gustavo Struve Consultoría Integral, acompañando al sector salud y a otros sectores con metodologías modernas de gestión — mejorando resultados operativos y optimizando la relación con cada cliente que asesora.",
   ],
   credentials: [
     "MBA · Formación ejecutiva",
