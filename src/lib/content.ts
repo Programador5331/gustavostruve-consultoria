@@ -34,7 +34,7 @@ export const hero = {
   ctaSecondary: "Ver servicios",
   stats: [
     { value: 200, suffix: "+", label: "Personas lideradas" },
-    { value: 15, suffix: "+", label: "Años en gestión de salud" },
+    { value: 20, suffix: "+", label: "Años en gestión de salud" },
     { value: 4, suffix: "", label: "Países de impacto" },
   ],
 };
@@ -268,7 +268,7 @@ export const about = {
   name: "Gustavo L. Struve A.",
   title: "Consultor Principal · MBA · Mgtr. Gerencia en Salud",
   bio: [
-    "MBA y Máster en Gerencia en Salud, con más de 15 años de experiencia liderando operaciones en el sector salud en Ecuador y Latinoamérica.",
+    "MBA y Máster en Gerencia en Salud, con más de 20 años de experiencia liderando operaciones en el sector salud en Ecuador y Latinoamérica.",
     "Ha ocupado cargos gerenciales en empresas de distintos sectores — salud, banca y retail — entre ellos Gerente Regional en VERIS, liderando equipos de más de 200 personas. Docente universitario en gestión de salud, formando a la próxima generación de directivos del sector.",
     "Desde 2013 es fundador y CEO de Gustavo Struve Consultoría Integral, acompañando al sector salud y a otros sectores con metodologías modernas de gestión — sin la estructura ni el costo de una consultora internacional.",
   ],
