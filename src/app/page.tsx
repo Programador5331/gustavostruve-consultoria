@@ -2,6 +2,7 @@ import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
 import { PainPoints } from "@/components/PainPoints";
 import { Pillars } from "@/components/Pillars";
+import { TeamBand } from "@/components/TeamBand";
 import { Consulting } from "@/components/Consulting";
 import { Kliniq } from "@/components/Kliniq";
 import { DigitalProducts } from "@/components/DigitalProducts";
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <PainPoints />
         <Pillars />
+        <TeamBand />
         <Consulting />
         <Kliniq />
         <DigitalProducts />

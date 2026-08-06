@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Check, ArrowRight, Activity } from "lucide-react";
 import { kliniq, whatsappLink } from "@/lib/content";
@@ -72,7 +73,28 @@ export function Kliniq() {
                   </a>
                 </div>
 
-                <div className="lg:col-span-5">
+                <div className="lg:col-span-5 space-y-6">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20, rotate: -1 }}
+                    whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+                    viewport={{ once: true, margin: "-60px" }}
+                    transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                    className="relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(37,99,235,0.18)] border border-[#E2E8F0]"
+                  >
+                    <Image
+                      src="/images/doctor-tablet.jpg"
+                      alt="Médico revisando la agenda y los indicadores de su consultorio en KliniQ 24/7 desde una tablet"
+                      width={700}
+                      height={560}
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                      className="w-full h-64 sm:h-80 object-cover"
+                    />
+                    <div
+                      className="absolute inset-0"
+                      style={{ background: "linear-gradient(180deg, transparent 60%, rgba(30,41,59,0.35))" }}
+                    />
+                  </motion.div>
+
                   <div className="rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-sm">
                     <p className="text-xs font-semibold uppercase tracking-wide text-[#64748B] mb-4">
                       Módulos del sistema
