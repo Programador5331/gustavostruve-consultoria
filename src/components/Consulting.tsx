@@ -1,10 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import {
   consultingServices,
-  pickaxeAgents,
   consultingResults,
   consultingProcess,
   whatsappLink,
@@ -24,20 +23,20 @@ export function Consulting() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <p className="text-sm font-semibold tracking-[0.14em] uppercase text-teal mb-4">
-            01 — Consultoría High Ticket
+            01 — Consultoría Personalizada
           </p>
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight max-w-2xl text-balance">
             Implementación real, no recomendaciones desde un escritorio.
           </h2>
           <p className="mt-6 max-w-2xl text-lg text-text-secondary">
             Gustavo Struve Consultoría combina experiencia real en operaciones de salud con
-            metodologías modernas e inteligencia artificial para transformar su institución
+            metodologías modernas e inteligencia artificial para transformar tu institución
             desde adentro.
           </p>
         </Reveal>
 
         {/* Services */}
-        <RevealGroup className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <RevealGroup className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {consultingServices.map((s) => (
             <motion.div
               key={s.num}
@@ -50,53 +49,19 @@ export function Consulting() {
               <h3 className="mt-5 font-bold text-lg leading-snug">{s.name}</h3>
               <p className="mt-2 text-sm text-text-secondary leading-relaxed flex-1">{s.text}</p>
               <div className="mt-6 pt-5 border-t border-border">
-                <div className="text-2xl font-extrabold tracking-tight">{s.price}</div>
+                {s.price ? (
+                  <div className="text-2xl font-extrabold tracking-tight">{s.price}</div>
+                ) : null}
                 <div className="text-xs text-text-tertiary mt-1">{s.unit}</div>
               </div>
             </motion.div>
           ))}
         </RevealGroup>
 
-        {/* Pickaxe agents */}
-        <div className="mt-24">
-          <Reveal>
-            <h3 className="text-2xl font-bold tracking-tight">
-              Agentes de Inteligencia Artificial Pickaxe
-            </h3>
-            <p className="mt-3 text-text-secondary max-w-xl">
-              Automatice procesos repetitivos de su clínica. Su equipo se enfoca en los
-              pacientes — la IA se encarga del resto.
-            </p>
-          </Reveal>
-
-          <RevealGroup className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {pickaxeAgents.map((a) => (
-              <motion.div
-                key={a.name}
-                variants={revealItem}
-                className="rounded-2xl border border-border bg-surface/40 p-6"
-              >
-                <h4 className="font-semibold">{a.name}</h4>
-                <ul className="mt-4 space-y-2.5">
-                  {a.items.map((it) => (
-                    <li key={it} className="flex items-start gap-2 text-sm text-text-secondary">
-                      <Check size={14} className="mt-0.5 text-teal shrink-0" />
-                      {it}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-5 pt-4 border-t border-border text-sm font-semibold text-teal">
-                  {a.price}
-                </div>
-              </motion.div>
-            ))}
-          </RevealGroup>
-        </div>
-
         {/* Results */}
         <Reveal className="mt-24 rounded-3xl border border-border bg-surface/40 p-10 lg:p-14">
           <h3 className="text-2xl font-bold tracking-tight mb-10">
-            ¿Qué puede esperar su institución?
+            ¿Qué puedes esperar de tu institución?
           </h3>
           <div className="grid sm:grid-cols-3 gap-10">
             {consultingResults.map((r) => (

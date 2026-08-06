@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { nav, site, whatsappLink } from "@/lib/content";
@@ -26,13 +27,13 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-10 h-18 flex items-center justify-between py-4">
-        <a href="#top" className="flex items-center gap-3 shrink-0">
+        <Link href="/#top" className="flex items-center gap-3 shrink-0">
           <Image
-            src="/images/logo-mark.svg"
+            src="/images/logo-mark.png"
             alt="Gustavo Struve"
-            width={32}
+            width={22}
             height={32}
-            className="h-8 w-8"
+            className="h-8 w-auto"
             priority
           />
           <span className="font-semibold tracking-tight text-[15px] leading-tight hidden sm:block">
@@ -41,7 +42,7 @@ export function Nav() {
               Consultoría Integral
             </span>
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
           {nav.map((item) => (

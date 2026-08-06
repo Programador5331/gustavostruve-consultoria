@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import { hero, whatsappLink } from "@/lib/content";
@@ -11,30 +12,44 @@ export function Hero() {
       id="top"
       className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden pt-28 pb-16"
     >
-      {/* animated aurora background */}
+      {/* background photo */}
       <div className="absolute inset-0 -z-10">
         <motion.div
-          className="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-[120px]"
-          style={{ background: "radial-gradient(circle, rgba(25,211,181,0.28), transparent 70%)" }}
-          animate={{ x: [0, 40, 0], y: [0, 30, 0] }}
-          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute top-1/3 -right-40 h-[480px] w-[480px] rounded-full blur-[120px]"
-          style={{ background: "radial-gradient(circle, rgba(143,124,245,0.22), transparent 70%)" }}
-          animate={{ x: [0, -30, 0], y: [0, 40, 0] }}
-          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <div className="absolute inset-0 noise-overlay" />
+          initial={{ scale: 1.1, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
+          className="absolute inset-0"
+        >
+          <Image
+            src="/images/hero-bg.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </motion.div>
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px)",
-            backgroundSize: "64px 64px",
-            maskImage: "radial-gradient(ellipse 80% 60% at 50% 20%, black, transparent)",
+            background:
+              "linear-gradient(100deg, #070b14 15%, rgba(7,11,20,0.94) 40%, rgba(7,11,20,0.65) 65%, rgba(7,11,20,0.45) 100%)",
           }}
         />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(0deg, #070b14 0%, transparent 22%, transparent 78%, rgba(7,11,20,0.5) 100%)",
+          }}
+        />
+        <motion.div
+          className="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-[120px]"
+          style={{ background: "radial-gradient(circle, rgba(25,211,181,0.22), transparent 70%)" }}
+          animate={{ x: [0, 40, 0], y: [0, 30, 0] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <div className="absolute inset-0 noise-overlay" />
       </div>
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10 w-full">
@@ -56,7 +71,7 @@ export function Hero() {
               className="text-balance text-[11vw] leading-[1.05] tracking-[-0.03em] font-extrabold sm:text-6xl lg:text-[5.2rem]"
             >
               Transformamos la{" "}
-              <span className="gradient-text">gestión</span> de su
+              <span className="gradient-text">gestión</span> de tu
               institución de salud.
             </motion.h1>
 

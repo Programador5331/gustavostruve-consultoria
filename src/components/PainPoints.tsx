@@ -13,7 +13,7 @@ export function PainPoints() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight max-w-xl text-balance">
-            ¿Le suena familiar?
+            ¿Te suena familiar?
           </h2>
         </Reveal>
 

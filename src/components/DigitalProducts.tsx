@@ -14,7 +14,7 @@ export function DigitalProducts() {
             03 — Productos Digitales
           </p>
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight max-w-2xl text-balance">
-            Formación práctica, a su propio ritmo.
+            Formación práctica, a tu propio ritmo.
           </h2>
           <p className="mt-6 max-w-2xl text-lg text-text-secondary">
             Ebooks y cursos on-demand para directivos y emprendedores que quieren aplicar
