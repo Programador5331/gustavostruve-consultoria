@@ -15,9 +15,9 @@ export const site = {
 };
 
 export const smartHospitalIndex = {
-  name: "Índice de Madurez Digital Hospitalaria",
-  tagline: "Diagnóstico hospitalario potenciado por IA",
-  text: "Evalúa gratis la madurez digital de tu hospital o clínica en 8 dimensiones clave y recibe un plan de acción ejecutivo en menos de 15 minutos. Sin costo.",
+  name: "Evaluación de Madurez Digital con IA",
+  tagline: "Diagnóstico ejecutivo en menos de 15 minutos",
+  text: "Evalúa gratis la madurez digital de tu hospital o clínica en 8 dimensiones clave y recibe un plan de acción ejecutivo. Sin costo.",
   cta: "Iniciar evaluación gratis",
   url: "https://smarthospitalindex.base44.app",
 };
