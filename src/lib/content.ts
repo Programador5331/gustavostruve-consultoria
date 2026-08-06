@@ -198,6 +198,7 @@ export const faq = [
 export const kliniq = {
   name: "KLINIQ 24/7",
   url: "/kliniq",
+  demoUrl: "https://www.kliniq247.com/",
   slogan: "Tu consultorio, en control. Las 24 horas.",
   pitch:
     "El sistema operativo de tu consultorio médico: centraliza cada proceso desde la primera cita hasta la última factura, disponible las 24 horas, los 7 días de la semana.",

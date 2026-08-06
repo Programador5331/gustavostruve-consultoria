@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Check, ArrowRight, Activity } from "lucide-react";
-import { kliniq, whatsappLink } from "@/lib/content";
+import { kliniq } from "@/lib/content";
 import { Reveal, RevealGroup, revealItem } from "@/components/ui/Reveal";
 
 export function Kliniq() {
@@ -78,7 +78,7 @@ export function Kliniq() {
                       </Link>
                     )}
                     <a
-                      href={whatsappLink("Hola, quisiera una demo de KliniQ 24/7 para mi consultorio.")}
+                      href={kliniq.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={
