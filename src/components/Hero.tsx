@@ -10,7 +10,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden pt-28 pb-16"
+      className="relative isolate min-h-[100svh] flex flex-col justify-center overflow-hidden pt-28 pb-16"
     >
       {/* background photo */}
       <div className="absolute inset-0 -z-10">
@@ -27,20 +27,21 @@ export function Hero() {
             priority
             sizes="100vw"
             className="object-cover"
+            style={{ objectPosition: "95% 48%" }}
           />
         </motion.div>
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(100deg, #070b14 15%, rgba(7,11,20,0.94) 40%, rgba(7,11,20,0.65) 65%, rgba(7,11,20,0.45) 100%)",
+              "linear-gradient(100deg, #070b14 0%, rgba(7,11,20,0.88) 28%, rgba(7,11,20,0.55) 50%, rgba(7,11,20,0.2) 75%, rgba(7,11,20,0.1) 100%)",
           }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(0deg, #070b14 0%, transparent 22%, transparent 78%, rgba(7,11,20,0.5) 100%)",
+              "linear-gradient(0deg, rgba(7,11,20,0.4) 0%, transparent 18%, transparent 82%, rgba(7,11,20,0.3) 100%)",
           }}
         />
         <motion.div

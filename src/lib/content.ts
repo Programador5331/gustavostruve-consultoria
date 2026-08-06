@@ -14,6 +14,14 @@ export const site = {
   location: "Quito, Ecuador",
 };
 
+export const smartHospitalIndex = {
+  name: "Índice de Madurez Digital Hospitalaria",
+  tagline: "Diagnóstico hospitalario potenciado por IA",
+  text: "Evalúa gratis la madurez digital de tu hospital o clínica en 8 dimensiones clave y recibe un plan de acción ejecutivo en menos de 15 minutos. Sin costo.",
+  cta: "Iniciar evaluación gratis",
+  url: "https://smarthospitalindex.base44.app",
+};
+
 export const whatsappLink = (text: string) =>
   `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(text)}`;
 
@@ -29,7 +37,7 @@ export const hero = {
   eyebrow: "Consultoría Estratégica en Gestión de Salud + IA",
   headline: "Transformamos la gestión de tu institución de salud.",
   subheadline:
-    "Resultados medibles. Sin grandes inversiones. Sin consultoras internacionales.",
+    "Resultados medibles. Sin grandes inversiones. A la medida de tu presupuesto.",
   cta: "Agenda una llamada de 20 minutos",
   ctaSecondary: "Ver servicios",
   stats: [

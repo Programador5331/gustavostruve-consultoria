@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Gauge } from "lucide-react";
 import {
   consultingServices,
   consultingResults,
   consultingProcess,
+  smartHospitalIndex,
   whatsappLink,
 } from "@/lib/content";
 import { Reveal, RevealGroup, revealItem } from "@/components/ui/Reveal";
@@ -57,6 +58,35 @@ export function Consulting() {
             </motion.div>
           ))}
         </RevealGroup>
+
+        {/* Smart Hospital Index — free lead magnet */}
+        <Reveal delay={0.1}>
+          <div className="mt-6 relative overflow-hidden rounded-2xl border border-amber/25 bg-gradient-to-r from-amber/[0.08] via-surface/40 to-surface/40 p-8 sm:p-10">
+            <div className="relative flex flex-col sm:flex-row sm:items-center gap-6">
+              <div className="h-12 w-12 shrink-0 rounded-xl bg-amber/15 flex items-center justify-center text-amber">
+                <Gauge size={22} />
+              </div>
+              <div className="flex-1">
+                <span className="text-[11px] font-semibold tracking-wide uppercase text-amber">
+                  Gratis · {smartHospitalIndex.tagline}
+                </span>
+                <h3 className="mt-2 text-xl font-bold tracking-tight">{smartHospitalIndex.name}</h3>
+                <p className="mt-2 text-sm text-text-secondary leading-relaxed max-w-2xl">
+                  {smartHospitalIndex.text}
+                </p>
+              </div>
+              <a
+                href={smartHospitalIndex.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 inline-flex items-center justify-center gap-2 rounded-full bg-amber px-6 py-3.5 text-sm font-semibold text-[#1a1206] hover:bg-white transition-colors"
+              >
+                {smartHospitalIndex.cta}
+                <ArrowRight size={15} />
+              </a>
+            </div>
+          </div>
+        </Reveal>
 
         {/* Results */}
         <Reveal className="mt-24 rounded-3xl border border-border bg-surface/40 p-10 lg:p-14">

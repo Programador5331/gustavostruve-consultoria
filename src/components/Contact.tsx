@@ -7,7 +7,7 @@ import { Reveal, RevealGroup, revealItem } from "@/components/ui/Reveal";
 
 export function Contact() {
   return (
-    <section id="contacto" className="py-28 lg:py-36 border-t border-border scroll-mt-20 relative overflow-hidden">
+    <section id="contacto" className="py-28 lg:py-36 border-t border-border scroll-mt-20 relative isolate overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <motion.div
           className="absolute top-0 left-1/2 -translate-x-1/2 h-[420px] w-[720px] rounded-full blur-[130px]"
