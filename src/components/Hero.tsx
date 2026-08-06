@@ -117,11 +117,11 @@ export function Hero() {
           >
             <div className="flex lg:flex-col gap-8 lg:gap-10 lg:border-l lg:border-border lg:pl-10">
               {hero.stats.map((s) => (
-                <div key={s.label}>
+                <div key={s.label} style={{ textShadow: "0 2px 10px rgba(0,0,0,0.85)" }}>
                   <div className="text-3xl sm:text-4xl font-extrabold tabular-nums">
                     <Counter value={s.value} suffix={s.suffix} />
                   </div>
-                  <div className="text-xs sm:text-sm text-text-tertiary mt-1">{s.label}</div>
+                  <div className="text-xs sm:text-sm text-white/75 mt-1">{s.label}</div>
                 </div>
               ))}
             </div>
