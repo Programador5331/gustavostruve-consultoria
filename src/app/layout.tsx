@@ -27,6 +27,11 @@ export const metadata: Metadata = {
     "Gustavo Struve",
   ],
   authors: [{ name: "Gustavo Struve" }],
+  alternates: {
+    types: {
+      "application/rss+xml": "/blog/rss.xml",
+    },
+  },
   openGraph: {
     title: "Gustavo Struve — Consultoría Integral en Gestión de Salud",
     description:

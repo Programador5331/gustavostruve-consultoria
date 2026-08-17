@@ -31,6 +31,7 @@ export const nav = [
   { label: "KliniQ 24/7", href: "/kliniq" },
   { label: "Productos Digitales", href: "/#productos" },
   { label: "Sobre mí", href: "/#sobre-mi" },
+  { label: "Blog", href: "/blog" },
   { label: "Contacto", href: "/#contacto" },
 ];
 
