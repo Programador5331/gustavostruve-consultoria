@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Nav } from "@/components/Nav";
@@ -27,6 +28,7 @@ export async function generateMetadata({
       description: post.excerpt,
       type: "article",
       publishedTime: post.date,
+      images: post.coverImage ? [{ url: post.coverImage, width: 1200, height: 627 }] : undefined,
     },
   };
 }
@@ -67,6 +69,19 @@ export default async function BlogPostPage({
           <h1 className="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-balance">
             {post.title}
           </h1>
+
+          {post.coverImage && (
+            <div className="relative mt-10 aspect-[16/9] rounded-2xl overflow-hidden border border-border">
+              <Image
+                src={post.coverImage}
+                alt=""
+                fill
+                sizes="(max-width: 1024px) 100vw, 768px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          )}
 
           <div
             className="prose-blog mt-12"
