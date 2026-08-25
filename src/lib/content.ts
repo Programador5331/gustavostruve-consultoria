@@ -261,6 +261,7 @@ export const digitalProducts: DigitalProduct[] = [
     description: "Guía práctica para emprender un negocio de comida rápida, de la idea al primer cliente.",
     status: "live",
     url: "https://go.hotmart.com/L103986937J",
+    coverImage: "/images/products/idea-a-negocio-rentable.jpg",
   },
   {
     title: "Emprende Desde Cero",
@@ -268,6 +269,7 @@ export const digitalProducts: DigitalProduct[] = [
     description: "Guía realista para crear ingresos en 90 días, sin fórmulas mágicas.",
     status: "live",
     url: "https://go.hotmart.com/Y104464949S",
+    coverImage: "/images/products/emprende-desde-cero.jpg",
   },
   {
     title: "Introducción a la Inteligencia Artificial",
@@ -275,12 +277,7 @@ export const digitalProducts: DigitalProduct[] = [
     description: "Curso completo para perder el miedo a la IA y empezar a aplicarla en el día a día.",
     status: "live",
     url: "https://go.hotmart.com/U104303889M",
-  },
-  {
-    title: "Dominando Meta Ads",
-    format: "Curso",
-    description: "Estrategias profesionales para vender y escalar con publicidad en Facebook e Instagram.",
-    status: "soon",
+    coverImage: "/images/products/introduccion-ia.jpg",
   },
 ];
 
