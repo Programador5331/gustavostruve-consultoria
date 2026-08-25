@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { BookOpen, PlayCircle, Bell } from "lucide-react";
 import { digitalProducts, whatsappLink } from "@/lib/content";
@@ -22,26 +23,42 @@ export function DigitalProducts() {
           </p>
         </Reveal>
 
-        <RevealGroup className="mt-16 grid sm:grid-cols-2 gap-5">
+        <RevealGroup className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {digitalProducts.map((p) => (
             <motion.div
               key={p.title}
               variants={revealItem}
               className="rounded-2xl border border-border bg-surface/40 p-7 flex flex-col"
             >
-              <div className="flex items-center justify-between">
-                <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber">
-                  {p.format === "Curso" ? <PlayCircle size={14} /> : <BookOpen size={14} />}
-                  {p.format}
-                </span>
-                {p.status === "soon" && (
-                  <span className="text-[11px] font-medium text-text-tertiary border border-border rounded-full px-2.5 py-1">
-                    Próximamente
-                  </span>
+              <div className="flex items-start gap-4">
+                {p.coverImage && (
+                  <div className="relative w-16 shrink-0 aspect-[850/1100] rounded-md overflow-hidden border border-border-strong">
+                    <Image
+                      src={p.coverImage}
+                      alt=""
+                      fill
+                      sizes="64px"
+                      className="object-cover"
+                    />
+                  </div>
                 )}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber">
+                      {p.format === "Curso" ? <PlayCircle size={14} /> : <BookOpen size={14} />}
+                      {p.format}
+                    </span>
+                    {p.status === "soon" && (
+                      <span className="text-[11px] font-medium text-text-tertiary border border-border rounded-full px-2.5 py-1 shrink-0">
+                        Próximamente
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="mt-3 text-xl font-bold tracking-tight">{p.title}</h3>
+                </div>
               </div>
-              <h3 className="mt-5 text-xl font-bold tracking-tight">{p.title}</h3>
-              <p className="mt-2 text-sm text-text-secondary leading-relaxed flex-1">
+
+              <p className="mt-4 text-sm text-text-secondary leading-relaxed flex-1">
                 {p.description}
               </p>
               {p.status === "live" && p.url ? (

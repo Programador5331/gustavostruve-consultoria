@@ -243,9 +243,18 @@ export type DigitalProduct = {
   description: string;
   status: "live" | "soon";
   url?: string;
+  coverImage?: string;
 };
 
 export const digitalProducts: DigitalProduct[] = [
+  {
+    title: "Calidad Práctica",
+    format: "Ebook",
+    description: "Guía de implementación para dirigir un sistema de gestión de calidad real en tu clínica, sin departamento de calidad ni burocracia — con plan de 90 días, matrices de riesgo y plantillas descargables.",
+    status: "live",
+    url: "https://go.hotmart.com/U107314702D?dp=1",
+    coverImage: "/images/products/calidad-practica.jpg",
+  },
   {
     title: "De la Idea al Negocio Rentable",
     format: "Ebook",
