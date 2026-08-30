@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ArrowDown } from "lucide-react";
 import { hero, site } from "@/lib/content";
 import { Counter } from "@/components/ui/Counter";
 
 export function Hero() {
+  const reduceMotion = useReducedMotion();
   return (
     <section
       id="top"
@@ -47,7 +48,7 @@ export function Hero() {
         <motion.div
           className="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-[120px]"
           style={{ background: "radial-gradient(circle, rgba(25,211,181,0.22), transparent 70%)" }}
-          animate={{ x: [0, 40, 0], y: [0, 30, 0] }}
+          animate={reduceMotion ? undefined : { x: [0, 40, 0], y: [0, 30, 0] }}
           transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
         />
         <div className="absolute inset-0 noise-overlay" />
@@ -95,14 +96,17 @@ export function Hero() {
                 href={site.meetingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full bg-teal px-7 py-4 text-sm font-semibold text-[#04140f] hover:bg-white transition-colors"
+                className="group inline-flex items-center gap-2 rounded-full bg-teal px-7 py-4 text-sm font-semibold text-[#04140f] hover:bg-white active:scale-[0.97] transition-[background-color,transform] duration-150"
               >
                 {hero.cta}
-                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                <ArrowRight
+                  size={16}
+                  className="duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1"
+                />
               </a>
               <a
                 href="#pilares"
-                className="inline-flex items-center gap-2 rounded-full border border-border-strong px-7 py-4 text-sm font-semibold text-text-primary hover:bg-surface transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-border-strong px-7 py-4 text-sm font-semibold text-text-primary hover:bg-surface active:scale-[0.97] transition-[background-color,transform] duration-150"
               >
                 {hero.ctaSecondary}
               </a>

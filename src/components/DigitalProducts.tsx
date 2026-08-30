@@ -38,7 +38,7 @@ export function DigitalProducts() {
                 rel="noopener noreferrer"
                 variants={revealItem}
                 whileHover={{ y: -4 }}
-                transition={{ type: "spring", stiffness: 300, damping: 24 }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 className="group flex gap-5 rounded-2xl border border-border bg-surface/40 p-5 hover:border-border-strong hover:bg-surface transition-colors"
               >
                 <div className="relative w-28 sm:w-32 shrink-0 aspect-[850/1100] rounded-lg overflow-hidden border border-border-strong">

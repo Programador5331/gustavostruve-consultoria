@@ -32,18 +32,18 @@ export function Pillars() {
                 <motion.a
                   href={p.href}
                   whileHover={{ y: -6 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 24 }}
-                  className={`group relative block h-full rounded-3xl border border-border bg-surface/40 p-8 lg:p-9 transition-colors ${c.border} overflow-hidden`}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  className={`group relative block h-full rounded-3xl border border-border bg-surface/40 p-8 lg:p-9 transition-colors duration-300 ${c.border} overflow-hidden`}
                 >
                   <div
-                    className="absolute -top-24 -right-24 h-56 w-56 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    className="absolute -top-24 -right-24 h-56 w-56 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     style={{ background: c.glow }}
                   />
                   <div className="relative flex items-start justify-between">
                     <span className={`text-sm font-mono ${c.text}`}>{p.tag}</span>
                     <ArrowUpRight
                       size={20}
-                      className="text-text-tertiary group-hover:text-text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
+                      className="text-text-tertiary duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:text-text-primary group-hover:translate-x-1 group-hover:-translate-y-1"
                     />
                   </div>
                   <h3 className="relative mt-16 text-2xl font-bold tracking-tight">{p.title}</h3>

@@ -79,7 +79,7 @@ export function Consulting() {
                 href={smartHospitalIndex.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="shrink-0 inline-flex items-center justify-center gap-2 rounded-full bg-amber px-6 py-3.5 text-sm font-semibold text-[#1a1206] hover:bg-white transition-colors"
+                className="shrink-0 inline-flex items-center justify-center gap-2 rounded-full bg-amber px-6 py-3.5 text-sm font-semibold text-[#1a1206] hover:bg-white active:scale-[0.97] transition-[background-color,transform] duration-150"
               >
                 {smartHospitalIndex.cta}
                 <ArrowRight size={15} />
@@ -139,10 +139,13 @@ export function Consulting() {
             href={site.meetingUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 rounded-full bg-teal px-8 py-4 text-sm font-semibold text-[#04140f] hover:bg-white transition-colors"
+            className="group inline-flex items-center gap-2 rounded-full bg-teal px-8 py-4 text-sm font-semibold text-[#04140f] hover:bg-white active:scale-[0.97] transition-[background-color,transform] duration-150"
           >
             Agendar reunión exploratoria gratuita
-            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            <ArrowRight
+              size={16}
+              className="duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1"
+            />
           </a>
         </Reveal>
       </div>

@@ -32,11 +32,14 @@ export function Contact() {
                 href={site.meetingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group mt-8 inline-flex items-center gap-2 rounded-full bg-teal px-7 py-4 text-sm font-semibold text-[#04140f] hover:bg-white transition-colors"
+                className="group mt-8 inline-flex items-center gap-2 rounded-full bg-teal px-7 py-4 text-sm font-semibold text-[#04140f] hover:bg-white active:scale-[0.97] transition-[background-color,transform] duration-150"
               >
                 <CalendarClock size={16} />
                 Agendar mi llamada gratuita
-                <ArrowRight size={15} className="transition-transform group-hover:translate-x-1" />
+                <ArrowRight
+                  size={15}
+                  className="duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1"
+                />
               </a>
             </Reveal>
 

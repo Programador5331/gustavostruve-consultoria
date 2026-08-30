@@ -21,11 +21,12 @@ export function WhatsAppFloat() {
           href={whatsappLink("Hola Gustavo, tengo una consulta.")}
           target="_blank"
           rel="noopener noreferrer"
-          initial={{ opacity: 0, scale: 0.6, y: 20 }}
+          initial={{ opacity: 0, scale: 0.85, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.6, y: 20 }}
+          exit={{ opacity: 0, scale: 0.85, y: 20 }}
           whileHover={{ scale: 1.06 }}
-          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 300, damping: 26 }}
           className="fixed bottom-6 right-6 z-40 h-14 w-14 rounded-full bg-teal text-[#04140f] flex items-center justify-center shadow-[0_8px_30px_rgba(25,211,181,0.35)]"
           aria-label="Escribir por WhatsApp"
         >

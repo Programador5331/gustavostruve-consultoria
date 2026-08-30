@@ -20,7 +20,7 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 inset-x-0 z-50 transition-[background-color,backdrop-filter,border-color] duration-300 ${
         scrolled
           ? "bg-bg/80 backdrop-blur-lg border-b border-border"
           : "bg-transparent border-b border-transparent"
@@ -61,7 +61,7 @@ export function Nav() {
             href={whatsappLink("Hola Gustavo, quisiera conversar sobre una consultoría.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-teal px-5 py-2.5 text-sm font-semibold text-[#04140f] hover:bg-teal/90 transition-colors"
+            className="inline-flex items-center gap-2 rounded-full bg-teal px-5 py-2.5 text-sm font-semibold text-[#04140f] hover:bg-teal/90 active:scale-[0.97] transition-[background-color,transform] duration-150"
           >
             {site.phone}
           </a>
@@ -82,6 +82,7 @@ export function Nav() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
             className="fixed inset-0 z-50 bg-bg lg:hidden"
           >
             <div className="flex items-center justify-between px-6 h-18 py-4 border-b border-border">
@@ -108,7 +109,7 @@ export function Nav() {
                 href={whatsappLink("Hola Gustavo, quisiera conversar sobre una consultoría.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-teal px-5 py-3.5 text-sm font-semibold text-[#04140f]"
+                className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-teal px-5 py-3.5 text-sm font-semibold text-[#04140f] active:scale-[0.97] transition-transform duration-150"
               >
                 Escribir por WhatsApp
               </a>
