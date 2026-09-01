@@ -169,6 +169,16 @@ export const consultingServices = [
     color: "violet",
     steps: [],
   },
+  {
+    num: "06",
+    name: "Planeación Estratégica Ágil en Salud",
+    category: "Estrategia",
+    text: "Desarrollo y acompañamiento de planeación estratégica ágil aplicada al sector salud, adaptada al contexto y ritmo real de tu institución.",
+    price: "Según proyecto",
+    unit: "se personaliza según alcance",
+    color: "blue",
+    steps: [],
+  },
 ];
 
 export const consultingResults = [

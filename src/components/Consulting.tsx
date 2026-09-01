@@ -39,14 +39,25 @@ export function Consulting() {
         {/* Services */}
         <RevealGroup className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {consultingServices.map((s) => (
-            <motion.div
+            <motion.a
               key={s.num}
+              href={site.meetingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               variants={revealItem}
-              className="flex flex-col rounded-2xl border border-border bg-surface/40 p-6"
+              whileHover={{ y: -4 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="group flex flex-col rounded-2xl border border-border bg-surface/40 p-6 hover:border-border-strong active:scale-[0.98] transition-colors duration-300"
             >
-              <span className={`self-start text-[11px] font-semibold px-2.5 py-1 rounded-full border ${colorMap[s.color]}`}>
-                {s.category}
-              </span>
+              <div className="flex items-start justify-between gap-3">
+                <span className={`self-start text-[11px] font-semibold px-2.5 py-1 rounded-full border ${colorMap[s.color]}`}>
+                  {s.category}
+                </span>
+                <ArrowRight
+                  size={16}
+                  className="mt-1 shrink-0 text-text-tertiary opacity-0 -translate-x-1 duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-text-primary"
+                />
+              </div>
               <h3 className="mt-5 font-bold text-lg leading-snug">{s.name}</h3>
               <p className="mt-2 text-sm text-text-secondary leading-relaxed flex-1">{s.text}</p>
               <div className="mt-6 pt-5 border-t border-border">
@@ -55,7 +66,7 @@ export function Consulting() {
                 ) : null}
                 <div className="text-xs text-text-tertiary mt-1">{s.unit}</div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </RevealGroup>
 
