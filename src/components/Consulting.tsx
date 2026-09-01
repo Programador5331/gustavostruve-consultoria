@@ -10,6 +10,7 @@ import {
   site,
 } from "@/lib/content";
 import { Reveal, RevealGroup, revealItem } from "@/components/ui/Reveal";
+import { ProcessFlow } from "@/components/ui/ProcessFlow";
 
 const colorMap: Record<string, string> = {
   teal: "text-teal border-teal/30 bg-teal/10",
@@ -130,19 +131,7 @@ export function Consulting() {
             </p>
           </Reveal>
 
-          <RevealGroup className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {consultingProcess.map((step) => (
-              <motion.div
-                key={step.num}
-                variants={revealItem}
-                className="rounded-2xl border border-border p-6"
-              >
-                <span className="text-sm font-mono text-teal">{step.num}</span>
-                <h4 className="mt-3 font-semibold">{step.title}</h4>
-                <p className="mt-2 text-sm text-text-secondary leading-relaxed">{step.text}</p>
-              </motion.div>
-            ))}
-          </RevealGroup>
+          <ProcessFlow steps={consultingProcess} />
         </div>
 
         <Reveal className="mt-20 flex justify-center">
