@@ -11,7 +11,7 @@ export const site = {
   linkedin: "https://linkedin.com/in/gustavostruve",
   facebook: "https://www.facebook.com/gustavostruveconsultoria",
   instagram: "https://www.instagram.com/gustavostruvemkt/",
-  youtube: "https://www.youtube.com/@gustavos1850",
+  youtube: "https://www.youtube.com/@gustavostruveCI",
   location: "Quito, Ecuador",
 };
 
