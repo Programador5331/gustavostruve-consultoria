@@ -4,9 +4,47 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import { Check, ArrowRight, Activity } from "lucide-react";
+import { Sora } from "next/font/google";
+import { Check, ArrowRight } from "lucide-react";
 import { kliniq } from "@/lib/content";
 import { Reveal, RevealGroup, revealItem } from "@/components/ui/Reveal";
+
+const sora = Sora({ subsets: ["latin"], weight: ["700", "800"] });
+
+function KliniqLogo() {
+  return (
+    <div className="flex items-center gap-[7px]">
+      <svg width="36" height="36" viewBox="0 0 80 80" fill="none" aria-label="KLINIQ 24/7 ícono">
+        <defs>
+          <linearGradient id="kliniq-circle-grad" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#0891B2" />
+            <stop offset="100%" stopColor="#22D3EE" />
+          </linearGradient>
+        </defs>
+        <circle cx="40" cy="40" r="40" fill="url(#kliniq-circle-grad)" />
+        <text x="14" y="58" fontFamily={sora.style.fontFamily} fontWeight={800} fontSize={44} fill="white">
+          K
+        </text>
+        <polyline
+          points="47,44 52,32 57,52 61,40 68,40"
+          fill="none"
+          stroke="#FFFFFF"
+          strokeWidth={3.5}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+      <span className={`${sora.className} font-extrabold text-lg text-[#1E293B] tracking-tight`}>
+        KLINIQ
+      </span>
+      <span
+        className={`${sora.className} text-[11px] font-bold text-white bg-[#10B981] rounded px-[6px] py-[3px] tracking-wide leading-none shrink-0`}
+      >
+        24/7
+      </span>
+    </div>
+  );
+}
 
 export function Kliniq() {
   const pathname = usePathname();
@@ -39,17 +77,7 @@ export function Kliniq() {
               />
               <div className="relative grid lg:grid-cols-12 gap-10 items-center">
                 <div className="lg:col-span-6">
-                  <div className="flex items-center gap-2.5">
-                    <div className="h-9 w-9 rounded-[10px] bg-[#2563EB] flex items-center justify-center">
-                      <Activity size={18} className="text-white" />
-                    </div>
-                    <span className="font-bold text-[#1E293B] tracking-tight text-lg">
-                      KLINIQ
-                    </span>
-                    <span className="text-[11px] font-semibold bg-[#1E293B] text-white px-2 py-0.5 rounded-full tracking-wide">
-                      24/7
-                    </span>
-                  </div>
+                  <KliniqLogo />
 
                   <h3 className="mt-7 text-3xl sm:text-4xl font-bold text-[#1E293B] tracking-tight text-balance">
                     {kliniq.slogan}
@@ -163,7 +191,7 @@ export function Kliniq() {
                   ))}
                 </RevealGroup>
                 <p className="mt-6 text-xs text-[#94A3B8]">
-                  Precios disponibles al solicitar una demo, según módulos y número de usuarios.
+                  Todos los planes incluyen 15 días de prueba gratis, sin tarjeta de crédito. Precios con IVA incluido.
                 </p>
               </div>
             </div>

@@ -225,25 +225,25 @@ export const kliniq = {
   value:
     "KLINIQ 24/7 elimina la fragmentación administrativa de tu consultorio o clínica, reuniendo en una sola plataforma en la nube todo lo que necesitas para gestionar tu práctica — sin importar la hora ni el dispositivo.",
   differentiators: [
-    "Gestión clínica completa (agenda + historia clínica + recetas + exámenes)",
-    "Facturación electrónica SRI nativa",
+    "Gestión clínica completa (agenda + historia clínica + recetas + facturación)",
+    "Facturación electrónica SRI nativa, con XML firmado y autorización automática",
     "Telemedicina integrada, sin apps de terceros",
-    "Cumplimiento normativo ecuatoriano desde el primer día",
-    "Disponibilidad 24/7 en la nube, con app móvil incluida",
+    "Cumplimiento normativo ecuatoriano desde el primer día (MSP, SRI, LOPDP)",
+    "Módulo de Gestión de Calidad en Salud: reporte de eventos y planes de acción",
   ],
   modules: [
     { name: "Agenda", text: "Gestión de citas, recordatorios automáticos, calendario por médico." },
     { name: "Historia Clínica", text: "HCE estructurada, evoluciones, antecedentes, plantillas por especialidad." },
-    { name: "Órdenes Médicas", text: "Generación de recetas, órdenes de laboratorio e imagen." },
-    { name: "Facturación", text: "Facturación electrónica SRI, notas de crédito, reportes fiscales." },
+    { name: "Facturación SRI", text: "Facturación electrónica, XML firmado y autorización automática." },
+    { name: "Bot de WhatsApp", text: "Tus pacientes agendan, confirman y cancelan citas directo desde WhatsApp." },
     { name: "Telemedicina", text: "Videoconsulta integrada, sala de espera virtual, grabación opcional." },
-    { name: "Odontología", text: "Odontograma digital, presupuestos por tratamiento, seguimiento." },
+    { name: "Gestión de Calidad", text: "Reporte de eventos adversos, análisis causal (RCA) y planes de acción con seguimiento." },
   ],
   plans: [
-    { name: "Solo", desc: "1 médico", features: ["Agenda", "Historia Clínica", "Órdenes Médicas", "Facturación"] },
-    { name: "Clínica", desc: "Hasta 5 usuarios", features: ["Todo Solo", "Exámenes", "Inventarios", "NPS", "Firma Digital"] },
-    { name: "Pro", desc: "Usuarios ilimitados", features: ["Todo Clínica", "Telemedicina", "Odontología", "Salud Ocupacional", "Normativa"] },
-    { name: "Enterprise", desc: "Red de clínicas", features: ["Todo Pro", "White-label", "Integraciones API"] },
+    { name: "Básico", desc: "$49/mes · hasta 2 usuarios", features: ["500 pacientes activos", "Agenda, HCE y facturación SRI", "Bot de WhatsApp"] },
+    { name: "Profesional", desc: "$89/mes · más popular", features: ["Hasta 5 usuarios · 2.000 pacientes", "Telemedicina y reportes avanzados", "Clínica multiservicio"] },
+    { name: "Completo", desc: "$149/mes · todo incluido", features: ["Usuarios y pacientes ilimitados", "Salud Ocupacional y Gestión de Calidad", "API, SLA 99.9%, soporte 24/7"] },
+    { name: "Enterprise", desc: "Redes de clínicas (10+ médicos)", features: ["Plan personalizado", "Integraciones a medida"] },
   ],
 };
 
