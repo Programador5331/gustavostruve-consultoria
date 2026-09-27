@@ -7,6 +7,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { articleSchema } from "@/lib/structuredData";
 
 export async function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -23,6 +24,9 @@ export async function generateMetadata({
   return {
     title: `${post.title} — Gustavo Struve Consultoría Integral`,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -52,6 +56,10 @@ export default async function BlogPostPage({
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema(post)) }}
+      />
       <Nav />
       <main className="flex-1 pt-32 pb-28">
         <article className="mx-auto max-w-3xl px-6 lg:px-10">
@@ -74,7 +82,7 @@ export default async function BlogPostPage({
             <div className="relative mt-10 aspect-[16/9] rounded-2xl overflow-hidden border border-border">
               <Image
                 src={post.coverImage}
-                alt=""
+                alt={post.title}
                 fill
                 sizes="(max-width: 1024px) 100vw, 768px"
                 className="object-cover"

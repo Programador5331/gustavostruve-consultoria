@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Blog — Gustavo Struve Consultoría Integral",
   description:
     "Ideas y casos prácticos sobre gestión de salud, transformación digital y liderazgo en instituciones médicas.",
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 function formatDate(date: string) {
@@ -60,7 +63,7 @@ export default function BlogIndexPage() {
                     <div className="relative aspect-[16/9] overflow-hidden">
                       <Image
                         src={post.coverImage}
-                        alt=""
+                        alt={post.title}
                         fill
                         sizes="(max-width: 1024px) 100vw, 33vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"

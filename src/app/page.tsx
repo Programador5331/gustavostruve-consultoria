@@ -1,3 +1,4 @@
+import { faqPageSchema } from "@/lib/structuredData";
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
 import { PainPoints } from "@/components/PainPoints";
@@ -15,6 +16,10 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema()) }}
+      />
       <Nav />
       <main className="flex-1">
         <Hero />

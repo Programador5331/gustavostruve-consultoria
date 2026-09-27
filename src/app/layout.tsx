@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Plus_Jakarta_Sans } from "next/font/google";
+import { organizationSchema } from "@/lib/structuredData";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -28,8 +29,18 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Gustavo Struve" }],
   alternates: {
+    canonical: "/",
     types: {
       "application/rss+xml": "/blog/rss.xml",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
     },
   },
   openGraph: {
@@ -49,7 +60,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="es"
       className={`${manrope.variable} ${jakarta.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

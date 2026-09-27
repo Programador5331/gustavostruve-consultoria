@@ -45,7 +45,7 @@ export function DigitalProducts() {
                   {p.coverImage && (
                     <Image
                       src={p.coverImage}
-                      alt=""
+                      alt={`Portada del ${p.format.toLowerCase()} "${p.title}"`}
                       fill
                       sizes="128px"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
