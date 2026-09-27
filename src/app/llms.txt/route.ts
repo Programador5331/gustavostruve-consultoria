@@ -19,7 +19,7 @@ Gustavo Struve es el consultor principal: MBA, Máster en Gerencia en Salud, má
 
 ## Líneas de servicio
 
-- [Consultoría Personalizada](${siteUrl}/#consultoria): diagnóstico y optimización de gestión para clínicas e instituciones de salud medianas y pequeñas en Ecuador y Latinoamérica.
+- [Consultoría Personalizada](${siteUrl}/consultoria): diagnóstico y optimización de gestión para clínicas e instituciones de salud medianas y pequeñas en Ecuador y Latinoamérica.
 - [KliniQ 24/7](${siteUrl}/kliniq): software de gestión clínica en la nube (agenda, historia clínica electrónica, facturación electrónica SRI, telemedicina). ${kliniq.pitch}
 - [Productos Digitales](${siteUrl}/#productos): ebooks y formación práctica en gestión de calidad y emprendimiento.
 

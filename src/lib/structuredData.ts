@@ -1,4 +1,4 @@
-import { site, about, faq, kliniq } from "@/lib/content";
+import { site, about, faq, kliniq, consultingServices } from "@/lib/content";
 import type { BlogPostMeta } from "@/lib/blog";
 
 const baseUrl = `https://${site.domain}`;
@@ -77,6 +77,36 @@ export function articleSchema(post: BlogPostMeta) {
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     inLanguage: "es-EC",
+  };
+}
+
+export function consultingServiceSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": `${baseUrl}/consultoria/#service`,
+    name: "Consultoría en Gestión de Salud — Gustavo Struve",
+    description:
+      "Diagnóstico, optimización operativa, sistemas de gestión de calidad y planeación estratégica para clínicas e instituciones de salud en Ecuador y Latinoamérica.",
+    url: `${baseUrl}/consultoria`,
+    provider: { "@id": `${baseUrl}/#organization` },
+    areaServed: ["Ecuador", "Latinoamérica"],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Servicios de consultoría",
+      itemListElement: consultingServices.map((s) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: s.name,
+          description: s.text,
+          category: s.category,
+        },
+        ...(s.price.startsWith("$")
+          ? { price: s.price.replace(/[^0-9.–-]/g, "").split(/[–-]/)[0], priceCurrency: "USD" }
+          : {}),
+      })),
+    },
   };
 }
 
