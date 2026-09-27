@@ -6,6 +6,11 @@ const nextConfig: NextConfig = {
       // Old GoDaddy Website Builder blog URLs (site migrated from GoDaddy).
       // Google still has these indexed; redirect instead of leaving them as 404s.
       {
+        source: "/blog/f.rss",
+        destination: "/blog/rss.xml",
+        permanent: true,
+      },
+      {
         source: "/f/:slug*",
         destination: "/blog",
         permanent: true,
