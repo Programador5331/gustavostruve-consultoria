@@ -191,7 +191,7 @@ export function Kliniq() {
                   ))}
                 </RevealGroup>
                 <p className="mt-6 text-xs text-[#94A3B8]">
-                  Todos los planes incluyen 15 días de prueba gratis, sin tarjeta de crédito. Precios con IVA incluido.
+                  Todos los planes incluyen 30 días de prueba gratis, sin tarjeta de crédito. Precios con IVA incluido; pagando anual tienes 20% de descuento.
                 </p>
               </div>
             </div>

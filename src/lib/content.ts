@@ -235,15 +235,15 @@ export const kliniq = {
     { name: "Agenda", text: "Gestión de citas, recordatorios automáticos, calendario por médico." },
     { name: "Historia Clínica", text: "HCE estructurada, evoluciones, antecedentes, plantillas por especialidad." },
     { name: "Facturación SRI", text: "Facturación electrónica, XML firmado y autorización automática." },
-    { name: "Bot de WhatsApp", text: "Tus pacientes agendan, confirman y cancelan citas directo desde WhatsApp." },
+    { name: "WhatsApp", text: "Recordatorios de cita por WhatsApp en un clic. Bot de agendamiento próximamente." },
     { name: "Telemedicina", text: "Videoconsulta integrada, sala de espera virtual, grabación opcional." },
     { name: "Gestión de Calidad", text: "Reporte de eventos adversos, análisis causal (RCA) y planes de acción con seguimiento." },
   ],
   plans: [
-    { name: "Básico", desc: "$49/mes · hasta 2 usuarios", features: ["500 pacientes activos", "Agenda, HCE y facturación SRI", "Bot de WhatsApp"] },
-    { name: "Profesional", desc: "$89/mes · más popular", features: ["Hasta 5 usuarios · 2.000 pacientes", "Telemedicina y reportes avanzados", "Clínica multiservicio"] },
-    { name: "Completo", desc: "$149/mes · todo incluido", features: ["Usuarios y pacientes ilimitados", "Salud Ocupacional y Gestión de Calidad", "API, SLA 99.9%, soporte 24/7"] },
-    { name: "Enterprise", desc: "Redes de clínicas (10+ médicos)", features: ["Plan personalizado", "Integraciones a medida"] },
+    { name: "Básico", desc: "$29/mes · hasta 2 usuarios", features: ["Pacientes ilimitados", "Agenda, HCE, recetas y facturación SRI", "Control de inventarios y recordatorios por WhatsApp"] },
+    { name: "Profesional", desc: "$89/mes · más popular", features: ["Hasta 5 usuarios · pacientes ilimitados", "Telemedicina, reportes avanzados y NPS", "Clínica multiservicio y Gestión de Calidad"] },
+    { name: "Completo", desc: "$149/mes · todo incluido", features: ["Hasta 15 usuarios · pacientes ilimitados", "Médico, Odontología y Psicología", "Eventos adversos, 99% de disponibilidad y soporte prioritario"] },
+    { name: "Clínica a medida", desc: "Varias especialidades o sedes", features: ["Plan Completo configurado para tu operación", "Migración de datos y capacitación en sitio"] },
   ],
 };
 
