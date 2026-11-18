@@ -240,8 +240,8 @@ export const kliniq = {
     { name: "Gestión de Calidad", text: "Reporte de eventos adversos, análisis causal (RCA) y planes de acción con seguimiento." },
   ],
   plans: [
-    { name: "Básico", desc: "$29/mes · hasta 2 usuarios", features: ["Pacientes ilimitados", "Agenda, HCE, recetas y facturación SRI", "Control de inventarios y recordatorios por WhatsApp"] },
-    { name: "Profesional", desc: "$89/mes · más popular", features: ["Hasta 5 usuarios · pacientes ilimitados", "Telemedicina, reportes avanzados y NPS", "Clínica multiservicio y Gestión de Calidad"] },
+    { name: "Básico", desc: "$29/mes · hasta 2 usuarios", features: ["Pacientes ilimitados · hasta 800 atenciones al año", "Agenda, HCE, recetas y facturación SRI", "Control de inventarios y recordatorios por WhatsApp"] },
+    { name: "Profesional", desc: "$89/mes · más popular", features: ["Hasta 5 usuarios · atenciones ilimitadas", "Telemedicina, reportes avanzados y NPS", "Gestión de Calidad con guía paso a paso"] },
     { name: "Completo", desc: "$149/mes · todo incluido", features: ["Hasta 15 usuarios · pacientes ilimitados", "Médico, Odontología y Psicología", "Eventos adversos, 99% de disponibilidad y soporte prioritario"] },
     { name: "Clínica a medida", desc: "Varias especialidades o sedes", features: ["Plan Completo configurado para tu operación", "Migración de datos y capacitación en sitio"] },
   ],
